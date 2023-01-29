@@ -1,32 +1,47 @@
 :root {
-    --font-family-primary: 'Inter Tight', sans-serif;
-    --color-primary-dark: #000000;
-    --bg-primary-dark: #000000;
-    --color-primary-light: #ffffff;
-    --bg-primary-light: #ffffff;
-    --color-primary-theme: #6466ec;
-    --color-secondary-theme: #ca0101;
-    --box-shadow-primary: 0px 4px 12px rgb(0 0 0 / 12%), 0px 0px 2px rgb(0 0 0 / 8%);
+    --font-family-one: 'Poppins', sans-serif;
+
+    --color-selection: #ffffff;
+    --bcolor-selection: #6466ec;
+
+    --color-scrollbar: #aaaaaa;
+    --hcolor-scrollbar: #717171;
+    --bcolor-scrollbar: #000000;
+
+    --color-theme-1: #000000;
+    --color-theme-2: #6466ec;
+    --color-theme-3: #ffffff;
+
+    --bcolor-body: #000000;
+    --bcolor-left: #f8fbfe;
+    --bcolor-right: #ffffff;
+    --color-title: #000000;
 }
 
 ::selection {
-    color: var(--color-primary-light);
-    background-color: var(--color-secondary-theme);
+    color: var(--color-selection);
+    background-color: var(--bcolor-selection);
 }
 
 ::-moz-selection {
-    color: var(--color-primary-light);
-    background-color: var(--color-secondary-theme);
+    color: var(--color-selection);
+    background-color: var(--bcolor-selection);
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--bg-primary-light);
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bcolor-scrollbar);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-clip: content-box;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hcolor-scrollbar);
 }
 
 * {
@@ -38,225 +53,200 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 8px;
     scroll-behavior: smooth;
 }
 
 body {
     width: 100%;
     height: 100%;
-    font-family: var(--font-family-primary);
-    color: var(--color-primary-dark);
-    background-color: var(--bg-primary-dark);
     overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
+    font-family: var(--font-family-one);
+    background-color: var(--bcolor-body);
 }
 
 .container {
     width: 100%;
-    min-height: 100vh;
-    /* width: 595px;
-    height: 842px; */
-    background-color: var(--bg-primary-dark);
 }
 
-.container .row {
+.row {
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
 }
 
-/* Column Left */
-.container .row .column-left {
-    min-height: 100vh;
+.row .left {
     flex-basis: 100%;
-    background-color: #f4f6f8;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    background-color: var(--bcolor-left);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.profile-photo-wrapper {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
 }
 
 .profile-photo {
-    display: block;
-    height: 150px;
-    width: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     border-radius: 50%;
-    background-color: var(--bg-primary-light);
+    background-color: var(--color-theme-3);
     padding: 1.5rem;
-    box-shadow: var(--box-shadow-primary);
+    box-shadow: 0px 4px 12px rgb(0 0 0 / 12%), 0px 0px 2px rgb(0 0 0 / 8%);
 }
 
-.title-sub {
-    display: block;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--color-primary-dark);
-    padding-bottom: 1rem;
-    letter-spacing: 2px;
-    border-bottom-width: 2px;
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-title);
+    letter-spacing: 1px;
+    border-bottom-width: 3px;
     border-bottom-style: solid;
-    border-bottom-color: var(--color-primary-dark);
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    border-bottom-color: var(--color-title);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
-.contact-wrapper {
+.contact {
     display: flex;
 }
 
-.contact-wrapper .row-contact {
+.contact .row {
     display: flex;
     flex-direction: column;
 }
 
-.contact-wrapper .row-contact .label {
+.contact .row .label {
     font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--color-primary-dark);
+    font-weight: 500;
+    color: var(--color-theme-1);
     margin-bottom: 1rem;
     margin-right: 1rem;
 }
 
-.contact-wrapper .row-contact .text {
+.contact .row .text {
     font-size: 1.6rem;
-    color: var(--color-primary-dark);
+    color: var(--color-theme-1);
     margin-bottom: 1rem;
 }
 
-.contact-wrapper .row-contact .text.link {
-    color: var(--color-primary-theme) !important;
+.contact .row .link {
+    font-size: 1.5rem;
+    color: var(--color-theme-2);
+    margin-bottom: 1rem;
 }
 
-.list-item {
+.item {
     position: relative;
     display: block;
+    text-decoration: none;
     font-size: 1.6rem;
-    color: var(--color-primary-dark);
-    padding-left: 2rem;
-    margin-bottom: 1rem;
+    color: var(--color-theme-1);
+    padding-left: 2.5rem;
+    border-radius: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
-.list-item::before {
-    position: absolute;
+.item::before {
     content: '';
+    position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
     width: 1rem;
     height: 1rem;
-    background-color: var(--bg-primary-dark);
-    border-radius: 50%;
+    background-color: var(--color-theme-1);
 }
 
-.list-item .link {
-    color: var(--color-primary-theme) !important;
+.item .bold {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
 }
 
-
-.list-item .bold {
-    font-weight: 600;
-    margin-right: 0.5rem;
+.item .small {
+    font-weight: 300;
 }
 
-.list-item .small {
-    font-size: 1.4rem !important;
+.project:hover {
+    background-color: var(--bcolor-left);
 }
 
-/* Column Right */
-.container .row .column-right {
-    min-height: 100vh;
+.project .label {
+    color: var(--color-theme-1);
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.project .link {
+    color: var(--color-theme-2);
+}
+
+.row .right {
     flex-basis: 100%;
-    background-color: #ffffff;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.column-right .column-top {
-    width: 100%;
-    height: auto;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: var(--bcolor-right);
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .name {
     font-size: 3.5rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5rem;
     word-spacing: 0.5rem;
-    color: var(--color-primary-dark);
-    margin-bottom: 1rem;
+    color: var(--color-theme-1);
     text-align: center;
 }
 
-.job-title {
-    display: block;
+.profession {
     font-size: 1.7rem;
+    font-weight: 500;
     letter-spacing: 0.2rem;
-    color: var(--color-primary-dark);
+    color: var(--color-theme-1);
     opacity: 0.7;
     text-align: center;
-}
-
-.column-right .column-bot {
-    padding-right: 1rem;
-    padding-left: 1rem;
 }
 
 .profile {
     font-size: 1.6rem;
     line-height: 1.4;
-    color: var(--color-primary-dark);
+    color: var(--color-theme-1);
     margin-bottom: 1rem;
 }
 
 @media only screen and (min-width: 992px) {
-    .container {
-        width: 70vw;
-        margin-left: auto;
-        margin-right: auto;
+    html {
+        font-size: 9.5px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .container .row {
+    .container {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .row {
         flex-direction: row;
     }
 
-    .container .row .column-left {
-        flex-basis: 30%;
+    .row .left {
+        flex-basis: 35%;
     }
 
-    .container .row .column-right {
-        flex-basis: 70%;
-    }
-
-    .column-right .column-top {
-        height: 200px;
-        padding-right: 5rem;
-        padding-left: 5rem;
-    }
-
-    .column-right .column-bot {
-        padding-right: 5rem;
-        padding-left: 5rem;
-    }
-
-    .profile-photo {
-        height: 200px;
-        width: 200px;
+    .row .right {
+        flex-basis: 65%;
     }
 
     .name {
@@ -264,8 +254,8 @@ a {
         text-align: left;
     }
 
-    .job-title {
-        font-size: 2rem;
+    .profession {
+        font-size: 2.5rem;
         text-align: left;
     }
 }
