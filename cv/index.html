@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Semih Utku Polat</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="robots" content="none" />
+
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://polatsemih.github.io/cv/assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://polatsemih.github.io/cv/assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://polatsemih.github.io/cv/assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="https://polatsemih.github.io/cv/assets/images/favicon_io/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+            background: #0d0d0d;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 400;
+            background: rgb(25, 24, 24);
+            background: -moz-linear-gradient(165deg, rgba(25, 24, 24, 1) 0%, rgba(21, 19, 19, 1) 100%);
+            background: -webkit-linear-gradient(165deg, rgba(25, 24, 24, 1) 0%, rgba(21, 19, 19, 1) 100%);
+            background: linear-gradient(165deg, rgba(25, 24, 24, 1) 0%, rgba(21, 19, 19, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#191818", endColorstr="#151313", GradientType=1);
+            -webkit-user-select: none;
+            -moz-user-selectq: none;
+            user-select: none;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            box-shadow: rgb(229, 232, 238, 0.35) 0 0 0.2rem;
+            background: rgb(6, 20, 51);
+            background: -moz-linear-gradient(165deg, rgba(6, 20, 51, 1) 0%, rgba(6, 5, 34, 1) 100%);
+            background: -webkit-linear-gradient(165deg, rgba(6, 20, 51, 1) 0%, rgba(6, 5, 34, 1) 100%);
+            background: linear-gradient(165deg, rgba(6, 20, 51, 1) 0%, rgba(6, 5, 34, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#061433", endColorstr="#060522", GradientType=1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 3.1rem;
+            letter-spacing: 0.2rem;
+            color: #fd4432;
+            margin-bottom: 5rem;
+            text-shadow: 0.3rem 0.3rem 1rem rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+
+        .button {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            border-width: 0.2rem;
+            border-style: solid;
+            border-color: #fd4432;
+            text-decoration: none;
+            box-shadow: 0.5rem 0.5rem 1rem #fd4432;
+            -webkit-transform: skew(-10deg);
+            -moz-transform: skew(-10deg);
+            -ms-transform: skew(-10deg);
+            -o-transform: skew(-10deg);
+            transform: skew(-10deg);
+            -webkit-transition-property: all;
+            -moz-transition-property: all;
+            -o-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: 0.1s;
+            -moz-transition-duration: 0.1s;
+            -o-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+            -webkit-transition-timing-function: ease;
+            -moz-transition-timing-function: ease;
+            -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+        }
+
+        .button:hover {
+            box-shadow: none;
+            -webkit-transform: skew(-10deg) translate(0.5rem, 0.5rem);
+            -moz-transform: skew(-10deg) translate(0.5rem, 0.5rem);
+            -ms-transform: skew(-10deg) translate(0.5rem, 0.5rem);
+            -o-transform: skew(-10deg) translate(0.5rem, 0.5rem);
+            transform: skew(-10deg) translate(0.5rem, 0.5rem);
+        }
+
+        .button_text {
+            display: block;
+            color: #ffffff;
+            font-size: 1.4rem;
+            -webkit-transform: skew(10deg);
+            -moz-transform: skew(10deg);
+            -ms-transform: skew(10deg);
+            -o-transform: skew(10deg);
+            transform: skew(10deg);
+        }
+
+        @media only screen and (min-width: 576px) {
+            h1 {
+                font-size: 4.5rem;
+                letter-spacing: 0.5rem;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            html {
+                font-size: 11px;
+            }
+        }
+
+        @media only screen and (min-width: 1001px) {
+            .container {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            html {
+                font-size: 12px;
+            }
+
+            .container {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (min-width: 1680px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (min-width: 2050px) {
+            html {
+                font-size: 16px;
+            }
+        }
+
+        @media only screen and (min-width: 2400px) {
+            html {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Semih Utku Polat</h1>
+        <a class="button" href="https://polatsemih.github.io/cv/en">
+            <span class="button_text">Click to see my CV</span>
+        </a>
+    </div>
+</body>
+
+</html>
